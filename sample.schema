@@ -1,0 +1,22 @@
+-- Schema for course enrollment database
+-- using SQLite data types.
+-- To create a database named "sample.db" with this schema use:
+-- sqlite3 sample.db < sample.schema
+
+CREATE TABLE IF NOT EXISTS courses (
+    id            INTEGER PRIMARY KEY AUTOINCREMENT,
+    course_number TEXT    NOT NULL,
+    title         TEXT    NOT NULL,
+    credits       INTEGER DEFAULT 0,
+    difficulty    REAL    DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS enrollment (
+    id             INTEGER PRIMARY KEY,
+    grade          TEXT    DEFAULT '',
+    course_id      INTEGER NOT NULL,
+    FOREIGN KEY (
+        course_id
+    )
+    REFERENCES courses (course_id)
+);

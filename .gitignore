@@ -1,0 +1,23 @@
+bin/
+build/
+*.class
+bin/
+build/
+out/
+.DS_[Ss]tore
+*.log
+__pycache__
+*.pyc
+# IDE files
+.idea
+*.iml
+*.ctxt
+package.bluej
+.nbproject
+.vscode
+vscode
+# Include Eclipse project files as hint to IntelliJ
+#.classpath
+#.settings
+#.project
+
