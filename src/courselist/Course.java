@@ -53,4 +53,12 @@ public class Course {
 	public void setDifficulty(double difficulty) {
 		this.difficulty = difficulty;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 }

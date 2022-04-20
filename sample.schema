@@ -15,8 +15,5 @@ CREATE TABLE IF NOT EXISTS enrollment (
     id             INTEGER PRIMARY KEY,
     grade          TEXT    DEFAULT '',
     course_id      INTEGER NOT NULL,
-    FOREIGN KEY (
-        course_id
-    )
-    REFERENCES courses (course_id)
+    FOREIGN KEY (course_id) REFERENCES courses (id)
 );
